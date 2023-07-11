@@ -22,5 +22,6 @@ PI01 movies LuisLQ - v7
 - 1) 'title' y 'overview'
   2) 'collection'
   3) 'genres'
+- El modelo elegido es K-vecinos
      
 
