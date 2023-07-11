@@ -18,7 +18,7 @@ from fastapi import FastAPI, status, Response
 # debido a recursos limitados en Render
 # valor = 0 se usa la BD completa
 df = pd.read_csv('MoviesDataset_v41.csv')
-valor = 2
+valor = 0
 df_filtrado = df[df['popularity'] > valor]
 
 movies = df_filtrado['title'].tolist()
@@ -53,7 +53,7 @@ genres_vectors_reduced = lsa_model.fit_transform(genres_vectors)
 
 # Concatenación de los vectores de características
 feature_vectors = np.concatenate((synopsis_vectors_reduced, collection_vectors_reduced, genres_vectors_reduced), axis=1)
-column_names = ['Feature_' + str(i+1) for i in range(600)]  # Nombres de las columnas
+column_names = ['Feature_' + str(i+1) for i in range(300)]  # Nombres de las columnas
 df_feature_vectors = pd.DataFrame(data=feature_vectors, columns=column_names)
 # Generar vectores de características
 feature_vectors = df_feature_vectors.values
