@@ -28,7 +28,7 @@ titleplus = df_filtrado['titleplus'].tolist()
 genres = df_filtrado['genres'].tolist()
 collection = df_filtrado['btc_name'].tolist()
 
-n_components = 200
+n_components = 150
 
 # Vectoriza las sinopsis  (título+overvies) utilizando TF-IDF
 vectorizer_synopsis = TfidfVectorizer(stop_words='english')
