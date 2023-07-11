@@ -18,7 +18,7 @@ from fastapi import FastAPI, status, Response
 # debido a recursos limitados en Render
 # valor = 0 se usa la BD completa
 df = pd.read_csv('MoviesDataset_v41.csv')
-valor = 0
+valor = 2
 df_filtrado = df[df['popularity'] > valor]
 
 movies = df_filtrado['title'].tolist()
